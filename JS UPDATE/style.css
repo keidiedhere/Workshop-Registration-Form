@@ -1,0 +1,74 @@
+/* Styling untuk seluruh body */
+body {
+    font-family: Calibri, Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.asterisk {
+    color: red;
+    margin-left: 5px;
+}
+
+/* Styling untuk form */
+form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 1em 2em;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Styling untuk label */
+label {
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    margin: 4px;
+}
+
+/* Styling untuk input, textarea, dan select */
+input[type="text"], textarea, select {
+    width: 250px;
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+/* Styling untuk tombol */
+input[type="submit"], input[type="reset"] {
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 47%;
+    border: none;
+    cursor: pointer;
+    margin: 4px 1%;
+    box-sizing: border-box;
+}
+
+/* Tombol Submit */
+input[type="submit"] {
+    background-color: green;
+}
+
+input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+/* Tombol Reset */
+input[type="reset"] {
+    background-color: #C00000;
+}
+
+input[type="reset"]:hover {
+    background-color: #900000;
+}
