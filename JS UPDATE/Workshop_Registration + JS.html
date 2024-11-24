@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Workshop Registration
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <form id = "workshopForm" onsubmit="SubmitForm(event)">
+            <h1>Workshop Registration</h1>
+            <div id="messageContainer"></div>
+            <label>Name<span class="asterisk">*</span></label>
+            <input 
+            type = "text"
+            id = "name" />
+            <br/>
+
+            <label>Email<span class="asterisk">*</span></label>
+            <input 
+            type = "text"
+            id = "email" />
+            <br/>
+
+            <label>Address</label>
+            <textarea rows="4" cols="50"> </textarea>
+            <br/>
+
+            <label for="Age">Age</label>
+            <select id ="Age" name="Age">
+            <option value="-select age-">-select age-</option>
+            <option value ="under 17">under 17</option>
+            <option value ="17-25">17-25</option>
+            <option value ="26-35">26-35</option>
+            <option value ="above 35">above 35</option>
+        </select>
+            <br/><br/>
+            <input type="reset" 
+            id = "ResetButton" 
+            onclick="ResetForm()"/>
+            <input type="submit" 
+            value ="Submit Form" 
+            id = "SubmitButton"
+            onclick="SubmitForm(event)"/>
+        </form>
+        
+<script>
+function ResetForm() {
+            const messageContainer = document.getElementById("messageContainer");
+            messageContainer.innerHTML = "";
+            messageContainer.style.padding = "";
+            messageContainer.style.margin = "";
+            messageContainer.style.backgroundColor = "";
+            messageContainer.style.color = "";
+}
+function SubmitForm(event) {
+    event.preventDefault(); 
+
+    const messageContainer = document.getElementById("messageContainer");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+
+    if (name.value.trim() == "" || email.value.trim() == "") {
+        messageContainer.innerHTML = "Please fill in your name and email.";
+        messageContainer.style.padding = "10px 20px";
+        messageContainer.style.margin = "4px";
+        messageContainer.style.backgroundColor = "#EECCCC";
+        messageContainer.style.color = "black";
+    } else {
+        messageContainer.innerHTML = "Thank you for your interest in our workshop. We will send you a confirmation mail if your name is added to the guest list.";
+        messageContainer.style.padding = "10px 20px";
+        messageContainer.style.margin = "4px";
+        messageContainer.style.backgroundColor = "#CCEECC";
+        messageContainer.style.color = "black";
+    }
+}
+   </script>
+    </body>
+</html>
+
